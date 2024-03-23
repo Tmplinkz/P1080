@@ -1,7 +1,7 @@
 {
   "name": "VideoCompressBot",
   "description": "Telegram's best Video Compress Bot",
-  "logo": "https://telegra.ph/file/b687febf32e4d583fb1d4.jpg",
+  "logo": "https://graph.org/file/5b024d56ddf781e28747a.jpg",
   "keywords": [
     "telegram",
     "best",
@@ -24,32 +24,32 @@
     },
     "TG_BOT_TOKEN": {
       "description": "Your bot token, as a string. Get this from @BotFather",
-      "value": "6617207139:AAFCJx0JEa-sUfKOf9DS97kWxzL3htMMgRY",
+      "value": "7158276391:AAH97w-kQZPMQOlpLDvskW0PHBRq0a6GrWg",
       "required": true
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "26376042",
+      "value": "10840324",
       "required": true
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "1f5343b0646645ca1eaf7c4759fc248f",
+      "value": "a630b9cf17959bcbffd661edbc719e09",
       "required": true
     },
     "BOT_USERNAME": {
       "description": "Your Bot Username. Without `@` before Username!",
-      "value": "AniCoder_01_Bot",
+      "value": "Encod3_bot",
       "required": true
     },
     "LOG_CHANNEL": {
       "description": "Your Bot's Log Channel's Username. For Help ask in @linux_repo",
-      "value": "ABotLogs",
+      "value": "encoderlog1",
       "required": true
     },
     "AUTH_USERS": {
       "description": "Allow only pre-defined users to use this bot as Sudo User. Separate with Space. Just for using Admin Commands.",
-      "value": "2036803347 -1002103913042 6691641006 6066177103",
+      "value": "5066042764",
       "required": true
     }
   },
