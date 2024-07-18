@@ -6,7 +6,7 @@ class Config(object):
     # sucks Dude
     APP_ID = int(get_config("APP_ID", "10840324"))
     API_HASH = get_config("API_HASH", "a630b9cf17959bcbffd661edbc719e09")
-    LOG_CHANNEL = get_config("LOG_CHANNEL", "encoderlog1")
+    LOG_CHANNEL = get_config("LOG_CHANNEL", "encode_axu")
     UPDATES_CHANNEL = get_config("UPDATES_CHANNEL", None) # Without `@` LOL
      # Get these values from my.telegram.org
     AUTH_USERS = set(
