@@ -44,7 +44,7 @@ from bot.plugins.status_message_fn import (
 from bot.commands import Command
 from bot.plugins.call_back_button_handler import button
 sudo_users = "2036803347" 
-crf.append("26")
+crf.append("21")
 codec.append("libx265")
 resolution.append("1920x1080")
 preset.append("veryfast")
