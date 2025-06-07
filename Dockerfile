@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 
+# Install necessary dependencies
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libglib2.0-0 \
@@ -12,11 +13,17 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     wget \
     xz-utils \
- && wget https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-n6.1-latest-linux64-gpl.tar.xz \
- && tar -xf ffmpeg-n6.1-latest-linux64-gpl.tar.xz \
- && cp -r ffmpeg-n6.1*/bin/* /usr/bin/ \
- && rm -rf ffmpeg-n6.1* *.tar.xz \
- && pip3 install --no-cache-dir -r requirements.txt
+    && rm -rf /var/lib/apt/lists/*
+
+# Download and extract FFmpeg binaries from Heroku buildpack
+RUN wget -O ffmpeg.tar.gz https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest/releases/latest/download/ffmpeg.tar.gz \
+    && mkdir -p /app/ffmpeg \
+    && tar -xzf ffmpeg.tar.gz -C /app/ffmpeg \
+    && cp /app/ffmpeg/bin/* /usr/local/bin/ \
+    && rm -rf ffmpeg.tar.gz /app/ffmpeg
+
+# Install Python dependencies
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
