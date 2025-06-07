@@ -44,11 +44,11 @@ from bot.plugins.status_message_fn import (
 from bot.commands import Command
 from bot.plugins.call_back_button_handler import button
 sudo_users = "2036803347" 
-crf.append("21")
+crf.append("20")
 codec.append("libx265")
 resolution.append("1920x1080")
-preset.append("veryfast")
-audio_b.append("40k")
+preset.append("fast")
+audio_b.append("48k")
 # 🤣
 
 
