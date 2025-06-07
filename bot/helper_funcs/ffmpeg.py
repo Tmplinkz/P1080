@@ -81,12 +81,12 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
     ##"-metadata", "title=@SenpaiAF", "-vf", "drawtext=fontfile=njnaruto.ttf:fontsize=20:fontcolor=black:x=15:y=15:text=" "Dark Encodes",
      ## -vf eq=gamma=1.4:saturation=1.4
      ## lol 😂
-    crf.append("25")
-    codec.append("libx264")
+    crf.append("20")
+    codec.append("libx265")
     resolution.append("1920x1080")
-    preset.append("veryfast")
-    audio_b.append("40k")
-    file_genertor_command = f"ffmpeg -hide_banner -loglevel quiet -progress '{progress}' -i '{video_file}' -metadata 'title=Encoded by XANIME UNIVERSE' -c:v {codec[0]}  -map 0 -crf {crf[0]} -c:s copy -pix_fmt yuv420p -s {resolution[0]} -b:v 150k -c:a libopus -b:a {audio_b[0]} -preset {preset[0]} -metadata:s:v 'title=XANIME UNIVERSE' -metadata:s:a 'title=XANIME UNIVERSE' -metadata:s:s 'title=XANIME UNIVERSE' '{out_put_file_name}' -y"
+    preset.append("fast")
+    audio_b.append("48k")
+    file_genertor_command = f"ffmpeg -hide_banner -loglevel quiet -progress '{progress}' -i '{video_file}' -metadata 'title=Encoded by XANIME UNIVERSE' -c:v {codec[0]}  -map 0 -crf {crf[0]} -c:s copy -pix_fmt yuv420p10le -s {resolution[0]} -b:v 150k -c:a libopus -b:a {audio_b[0]} -preset {preset[0]} -metadata:s:v 'title=XANIME UNIVERSE' -metadata:s:a 'title=XANIME UNIVERSE' -metadata:s:s 'title=XANIME UNIVERSE' '{out_put_file_name}' -y"
  #Done !!
     COMPRESSION_START_TIME = time.time()
     process = await asyncio.create_subprocess_shell(
